@@ -1,5 +1,12 @@
 import ImageGallery from 'react-image-gallery';
 import '../styles/Portfolio.css';
+import todoLogin from '../img/todo-login.jpg';
+import todoEdit from '../img/todo-edit.jpg';
+import todoTasks from '../img/todo-tasks.jpg';
+import weatherLogin from '../img/weather-app-login.jpg';
+import weatherHomescreen from '../img/weather-app-homescreen.jpg';
+import weatherLocations from '../img/weather-app-locations.jpg';
+import weatherDetails from '../img/weather-app-details.jpg';
 
 function Portfolio() {
     const projects = [
@@ -12,17 +19,17 @@ function Portfolio() {
             about: '',
             screenshotsUrls: [
                 {
-                    original: './src/img/todo-login.png',
+                    original: todoLogin,
                     originalHeight: '200px',
                     originalWidth: '200px',
                 },
                 {
-                    original: './src/img/todo-tasks.png',
+                    original: todoTasks,
                     originalHeight: '200px',
                     originalWidth: '200px',
                 },
                 {
-                    original: './src/img/todo-edit.png',
+                    original: todoEdit,
                     originalHeight: '200px',
                     originalWidth: '200px',
                 },
@@ -37,28 +44,30 @@ function Portfolio() {
             about: '',
             screenshotsUrls: [
                 {
-                    original: './src/img/weather-app-login.png',
+                    original: weatherLogin,
                     originalHeight: '400px',
                     originalWidth: '400px',
                 },
                 {
-                    original: './src/img/weather-app-homescreen.png',
+                    original: weatherHomescreen,
                     originalHeight: '400px',
                     originalWidth: '400px',
                 },
                 {
-                    original: './src/img/weather-app-details.png',
+                    original: weatherDetails,
                     originalHeight: '400px',
                     originalWidth: '400px',
                 },
                 {
-                    original: './src/img/weather-app-locations.png',
+                    original: weatherLocations,
                     originalHeight: '400px',
                     originalWidth: '400px',
                 },
             ],
         },
     ];
+
+    console.log(weatherLogin);
     return (
         <div>
             <div className="title">Portfolio</div>
