@@ -87,17 +87,17 @@ function Portfolio() {
                         </div>
 
                         <div className="project-info-container">
-                            <div>
-                                <span className="project-description">
+                            <div className="project-titles-container">
+                                <div className="project-description">
                                     Category:
-                                </span>
-                                {el.category}
+                                </div>
+                                <div>{el.category}</div>
                             </div>
-                            <div>
-                                <span className="project-description">
+                            <div className="project-titles-container">
+                                <div className="project-description">
                                     Project Date:
-                                </span>
-                                {el.projectDate}
+                                </div>
+                                <div>{el.projectDate}</div>
                             </div>
                             <div>
                                 <span className="project-description">
