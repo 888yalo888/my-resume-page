@@ -1,6 +1,6 @@
 .title {
-    font-size: 27px;
+    /* font-size: var(--medium-font); */
     font-weight: bold;
-    color: #6f9389;
+    color: var(--green-color);
     padding: 5px 0 5px 0;
 }

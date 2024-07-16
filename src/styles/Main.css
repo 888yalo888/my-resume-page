@@ -1,30 +1,42 @@
 main {
-    position: absolute;
-    left: 300px;
-    width: calc(100% - 300px);
+    margin-bottom: var(--main-margin-bottom);
 }
 
-img {
+/* img {
     width: 100%;
-}
+} */
 
 .my-first-photo-container {
     height: 100vh;
-    width: 100%;
-}
-
-.my-first-photo-container {
+    /* width: 100%; */
     display: flex;
     justify-content: center;
     overflow: hidden;
-    /* align-items: center; */
-    background-color: #6f9389;
+    align-items: center;
+    background-color: var(--green-color);
 }
 
 .my-first-photo {
+    margin-left: -14px;
     width: auto;
     height: 100vh;
-    padding-right: 200px;
+    /* padding-right: 200px; */
+}
+
+.name-hero-header-container {
+    position: relative;
+    height: 100vh;
+}
+.hero-inner-container {
+    position: absolute;
+    left: var(--left-offset);
+    width: calc(100% - var(--left-offset));
+}
+
+.info-section-containers {
+    margin-left: var(--left-offset);
+    margin-right: var(--left-offset);
+    margin-bottom: var(--section-margin-bottom);
 }
 
 @keyframes instant-left-strip-animation {
@@ -34,17 +46,19 @@ img {
 }
 
 .big-title {
-    font-size: 40px;
+    font-size: var(--large-font);
     padding: 50px 0 50px 0;
     line-height: 1.2;
-    max-width: 90%;
+    font-weight: normal;
+    margin-right: -100px;
+    /* max-width: 90%; */
 }
 
-.main-block {
+/* .main-block {
     min-width: 500px;
     width: 60%;
     line-height: 1.75;
-}
+} */
 
 .main-block-text {
     margin-bottom: 35px;
@@ -52,23 +66,49 @@ img {
 
 .cat {
     padding: 20px 0 20px 0;
+    width: 80%;
 }
 
 .skill-container {
-    display: flex;
-    flex-wrap: wrap;
-    width: 400px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, 120px);
+    gap: 25px;
+    /* width: 400px; */
     justify-content: space-between;
-    padding: 50px;
+    justify-items: center;
+    align-items: center;
+
+    padding: 100px 25px;
+}
+
+@media (min-width: 1280px) {
+    .skill-container {
+        padding: 100px 200px;
+    }
 }
 
 .main-block-container {
     display: flex;
+    align-items: baseline;
+    text-align: justify;
+    gap: 75px;
 }
 
-.side-block {
-    padding: 0 0 0 75px;
+.general_experience {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
+
+.paragraphs {
+    font: var(--base-font);
+    text-align: justify;
+    line-height: var(--base-line-height);
+}
+/* .side-block {
+    padding: 0 0 0 75px;
+} */
 
 .side-block-title {
     font-weight: bold;
@@ -85,29 +125,42 @@ img {
 }
 
 #get-in-touch {
-    color: #6f9389;
+    color: var(--green-color);
     font-size: 30px;
     margin-bottom: 20px;
 }
 
-.footer {
+/* .footer {
     font-style: italic;
     font-size: 10px;
     padding-bottom: 20px;
-}
+} */
 
 @media (max-width: 768px) {
     main {
         position: static;
         width: 100%;
     }
+    .main-block-container {
+        gap: 0;
+    }
+    .side-block {
+        padding: 0;
+        margin: auto;
+    }
+    .skill-container {
+        padding: 30px 25px 100px 25px;
+    }
+    .name-hero-header-container {
+        background-color: var(--green-color);
+    }
 }
 
 @media (max-width: 1100px) {
-    main {
+    /* main {
         left: 250px;
         width: calc(100% - 250px);
-    }
+    } */
 
     footer {
         padding: 60px 0 30px 0;
@@ -128,6 +181,40 @@ img {
     }
 
     .main-container {
-        padding-left: 40px;
+        padding-left: var(--padding-left-40);
+    }
+}
+
+@media (max-width: 768px) {
+    .skill-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+
+    .hero-inner-container {
+        position: unset;
+        left: unset;
+        width: unset;
+    }
+
+    .my-first-photo-container {
+        height: 100vh;
+        width: unset;
+        display: block;
+        justify-content: unset;
+        overflow: hidden;
+        align-items: unset;
+        background-color: var(--green-color);
+    }
+    .name-hero-header-container {
+        position: unset;
+        height: 100vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .big-title {
+        margin-right: unset;
     }
 }

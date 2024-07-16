@@ -1,72 +1,85 @@
 .time {
-  font-size: 12px;
+    font-size: var(--small-font);
 }
 
 .position {
-  font-size: 13px;
-  font-weight: bold;
-  line-height: 40px;
+    font-weight: bold;
+    font-size: var(--base-font);
+    /* line-height: 40px; */
 }
 
 .place-position {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    /* font-size: var(--medium-font); */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .place {
-  font-size: 12px;
-  font-style: italic;
-  color: #ee7968;
+    font-size: var(--small-font);
+    font-style: italic;
+    color: #ee7968;
+}
+
+@media (max-width: 768px) {
+    .place-position {
+        flex-direction: column;
+        align-items: unset;
+    }
 }
 
 .description {
-  background-color: #efe7e4;
-  margin-bottom: 20px;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 1s;
+    background-color: #efe7e4;
+    margin-bottom: 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s;
 }
 
 .description ul {
-  padding: 25px;
+    padding: 25px;
 }
 
 .description.open {
-  max-height: 1000px;
-  transition: max-height 1s;
+    max-height: 1000px;
+    transition: max-height 1s;
 }
 
 .disk {
-  background-color: #ee7968;
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  margin-top: 12px;
-  margin-right: 11px;
+    background-color: #ee7968;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    margin-top: 12px;
+    margin-right: 11px;
 }
 
 .description li {
-  display: flex;
-  margin-bottom: 10px;
+    display: flex;
+    margin-bottom: 10px;
 }
 
 .text {
-  width: fit-content;
+    width: fit-content;
+    line-height: var(--base-line-height);
 }
 
 .open-close-animation-container {
-  display: flex;
-  justify-content: space-between;
-  /* cursor: pointer; */
-  & > svg {
-    fill: #6f9389;
-    &.closed-eye {
-      opacity: 0.7;
+    display: flex;
+    justify-content: space-between;
+    /* cursor: pointer; */
+    & > svg {
+        fill: var(--green-color);
+        &.closed-eye {
+            opacity: 0.7;
+        }
     }
-  }
 }
 
 .click-area {
-  cursor: pointer;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 16px;
 }

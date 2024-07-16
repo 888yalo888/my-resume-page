@@ -1,47 +1,48 @@
 .svg-container {
-  display: flex;
-  width: 125px;
-  height: 125px;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 30px;
+    display: flex;
+    width: 100px;
+    height: 100px;
+    flex-direction: column;
+    align-items: center;
+    /* margin-bottom: 30px; */
+    /* align-self: center; */
 }
 
 .circular-chart {
-  display: block;
-  /* margin: 10px auto;
+    display: block;
+    /* margin: 10px auto;
   max-width: 80%;
   max-height: 250px; */
 }
 
 .circle-bg {
-  fill: none;
-  stroke: #eee;
-  stroke-width: 3.8;
+    fill: none;
+    stroke: #eee;
+    stroke-width: 3.8;
 }
 
 .circle {
-  fill: none;
-  stroke-width: 2.8;
-  stroke-linecap: round;
-  animation: progress 1s ease-out forwards;
+    fill: none;
+    stroke-width: 2.8;
+    stroke-linecap: round;
+    animation: progress 1s ease-out forwards;
 }
 
 @keyframes progress {
-  0% {
-    stroke-dasharray: 0 100;
-  }
+    0% {
+        stroke-dasharray: 0 100;
+    }
 }
 
 .circular-chart.orange .circle {
-  stroke: #ee7968;
-  width: 50px;
-  height: 50px;
+    stroke: #ee7968;
+    width: 50px;
+    height: 50px;
 }
 
 .percentage {
-  fill: #666;
-  font-family: sans-serif;
-  font-size: 0.5em;
-  text-anchor: middle;
+    fill: #666;
+    font-family: sans-serif;
+    font-size: 0.5em;
+    text-anchor: middle;
 }

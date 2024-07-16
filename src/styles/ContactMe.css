@@ -1,23 +1,23 @@
 .contact-me {
-  line-height: 1.375em;
-  letter-spacing: 0.1em;
-  font-size: 13px;
-  padding-bottom: 10px;
-  
+    line-height: 1.375em;
+    letter-spacing: 0.1em;
+    font-size: 13px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 
-.contact-me-information {
-  display: flex;
-  flex-direction: column;
-  height: 100px;
-  justify-content: space-evenly;
-  font-size: 10px;
-  
+.contact-me > a,
+.contact-me > a:visited {
+    text-decoration: none;
+    color: var(--white-color);
+    font-size: 13px;
 }
 
-.contact-me-information > a,
-.contact-me-information > a:visited {
-  text-decoration: none;
-  color: #0a1a2b;
+.contact-me-title {
+    line-height: 1.375em;
+    letter-spacing: 0.1em;
+    font-size: 13px;
+    margin-bottom: 10px;
 }
-

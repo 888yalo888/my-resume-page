@@ -1,0 +1,20 @@
+.footer {
+    background-color: var(--green-color);
+    color: #f8f2f0;
+    padding: var(--section-margin-bottom) 0;
+}
+
+.contact-social-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: start;
+    margin: 0 var(--left-offset);
+}
+
+@media (max-width: 768px) {
+    .contact-social-container {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+}

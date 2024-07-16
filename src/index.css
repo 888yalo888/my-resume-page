@@ -1,1 +1,20 @@
+:root {
+    --left-offset: 300px;
+    --section-margin-bottom: 10px;
+    --main-margin-bottom: 100px;
+    --green-color: #6f9389;
+    --white-color: #f8f2f0;
+    --padding-left-40: 40px;
+    --base-font: 16px;
+    --medium-font: calc(var(--base-font) * 1.5); /*24*/
+    --small-font: calc(var(--base-font) * 0.75); /*12px*/
+    --large-font: calc(var(--base-font) * 2); /*32*/
+    --black-color: #0a1a2b;
+    --base-line-height: 1.75;
+}
 
+@media (max-width: 768px) {
+    :root {
+        --left-offset: 10px;
+    }
+}

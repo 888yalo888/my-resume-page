@@ -16,7 +16,7 @@ function Portfolio() {
             projectDate: ' 8 February, 2024',
             projectUrl: 'https://todo-list-front-end-yxgf.onrender.com/',
             repositoryUrl: 'https://github.com/888yalo888/todo-list-front-end',
-            about: '',
+            about: 'project description',
             screenshotsUrls: [
                 {
                     original: todoLogin,
@@ -41,7 +41,7 @@ function Portfolio() {
             projectDate: '3 June, 2024',
             projectUrl: 'https://weather-app-front-end-vjqh.onrender.com/',
             repositoryUrl: 'https://github.com/888yalo888/weather-app',
-            about: '',
+            about: 'project description',
             screenshotsUrls: [
                 {
                     original: weatherLogin,
@@ -69,58 +69,64 @@ function Portfolio() {
 
     console.log(weatherLogin);
     return (
-        <div>
-            <div className="title">Portfolio</div>
-            {projects.map((el, index) => (
-                <div className="project-container" key={index}>
-                    <div className="position">{el.description}</div>
-                    <div className="carousel-description-container">
-                        <div className="carousel-container">
-                            <ImageGallery
-                                items={el.screenshotsUrls}
-                                showBullets={true}
-                                slideInterval={5000}
-                                showFullscreenButton={false}
-                                showPlayButton={false}
-                                // autoPlay={true}
-                            />
-                        </div>
+        <div className="portfolio-container">
+            <h2 className="title">Portfolio</h2>
+            <div className="all-projects-container">
+                {projects.map((el, index) => (
+                    <article className="project-container" key={index}>
+                        <h4 className="project-title">{el.description}</h4>
+                        <div className="carousel-description-container">
+                            <div className="carousel-container">
+                                <ImageGallery
+                                    items={el.screenshotsUrls}
+                                    showBullets={true}
+                                    slideInterval={5000}
+                                    showFullscreenButton={false}
+                                    showPlayButton={false}
+                                    // autoPlay={true}
+                                />
+                            </div>
 
-                        <div className="project-info-container">
-                            <div className="project-titles-container">
-                                <div className="project-description">
-                                    Category:
+                            <div className="project-info-container">
+                                <div className="project-titles-container">
+                                    <div className="project-description">
+                                        Category:
+                                    </div>
+                                    <div>{el.category}</div>
                                 </div>
-                                <div>{el.category}</div>
-                            </div>
-                            <div className="project-titles-container">
-                                <div className="project-description">
-                                    Project Date:
+                                <div className="project-titles-container">
+                                    <div className="project-description">
+                                        Project Date:
+                                    </div>
+                                    <div>{el.projectDate}</div>
                                 </div>
-                                <div>{el.projectDate}</div>
+                                <div>
+                                    <span className="project-description">
+                                        Project URL:
+                                    </span>{' '}
+                                    <a href={el.projectUrl} className="link">
+                                        {el.projectUrl}
+                                    </a>
+                                </div>
+                                <div>
+                                    <span className="project-description">
+                                        Repository URL:
+                                    </span>{' '}
+                                    <a href={el.repositoryUrl} className="link">
+                                        {el.repositoryUrl}
+                                    </a>
+                                </div>
+                                <div className="project-titles-container">
+                                    <div className="project-description">
+                                        About:
+                                    </div>
+                                    <div>{el.about}</div>
+                                </div>
                             </div>
-                            <div>
-                                <span className="project-description">
-                                    Project URL:
-                                </span>{' '}
-                                <a href={el.projectUrl} className="link">
-                                    {el.projectUrl}
-                                </a>
-                            </div>
-                            <div>
-                                <span className="project-description">
-                                    Repository URL:
-                                </span>{' '}
-                                <a href={el.repositoryUrl} className="link">
-                                    {el.repositoryUrl}
-                                </a>
-                            </div>
-                            <div className="project-description">About</div>
-                            <div>{el.about}</div>
                         </div>
-                    </div>
-                </div>
-            ))}
+                    </article>
+                ))}
+            </div>
         </div>
     );
 }
