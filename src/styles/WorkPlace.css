@@ -25,6 +25,7 @@
     .place-position {
         flex-direction: column;
         align-items: unset;
+        gap: 10px;
     }
 }
 
