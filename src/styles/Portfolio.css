@@ -13,8 +13,13 @@
     gap: 10px;
 }
 
-.project-description {
+.project-description-title {
     font-weight: bold;
+    font-size: var(--base-font);
+}
+
+.project-description {
+    font-size: var(--base-font);
 }
 
 .project-container {
@@ -32,11 +37,7 @@
     line-height: 2;
 }
 
-.project-title {
-    /* font-weight: normal; */
-}
-
-.project-description,
+.project-description-title,
 .link {
     display: inline;
     vertical-align: middle;

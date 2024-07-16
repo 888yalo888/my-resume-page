@@ -89,19 +89,23 @@ function Portfolio() {
 
                             <div className="project-info-container">
                                 <div className="project-titles-container">
-                                    <div className="project-description">
+                                    <div className="project-description-title">
                                         Category:
                                     </div>
-                                    <div>{el.category}</div>
+                                    <div className="project-description">
+                                        {el.category}
+                                    </div>
                                 </div>
                                 <div className="project-titles-container">
-                                    <div className="project-description">
+                                    <div className="project-description-title">
                                         Project Date:
                                     </div>
-                                    <div>{el.projectDate}</div>
+                                    <div className="project-description">
+                                        {el.projectDate}
+                                    </div>
                                 </div>
                                 <div>
-                                    <span className="project-description">
+                                    <span className="project-description-title">
                                         Project URL:
                                     </span>{' '}
                                     <a href={el.projectUrl} className="link">
@@ -109,7 +113,7 @@ function Portfolio() {
                                     </a>
                                 </div>
                                 <div>
-                                    <span className="project-description">
+                                    <span className="project-description-title">
                                         Repository URL:
                                     </span>{' '}
                                     <a href={el.repositoryUrl} className="link">
@@ -117,10 +121,12 @@ function Portfolio() {
                                     </a>
                                 </div>
                                 <div className="project-titles-container">
-                                    <div className="project-description">
+                                    <div className="project-description-title">
                                         About:
                                     </div>
-                                    <div>{el.about}</div>
+                                    <div className="project-description">
+                                        {el.about}
+                                    </div>
                                 </div>
                             </div>
                         </div>

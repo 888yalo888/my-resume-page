@@ -9,6 +9,7 @@
     --medium-font: calc(var(--base-font) * 1.5); /*24*/
     --small-font: calc(var(--base-font) * 0.75); /*12px*/
     --large-font: calc(var(--base-font) * 2); /*32*/
+    --extra-small-font: calc(var(--base-font) / 2);
     --black-color: #0a1a2b;
     --base-line-height: 1.75;
 }

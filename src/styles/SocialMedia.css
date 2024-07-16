@@ -1,7 +1,7 @@
 .where-to-find {
     line-height: 1.375em;
     letter-spacing: 0.1em;
-    font-size: 13px;
+    font-size: var(--small-font);
     margin-bottom: 10px;
 }
 
@@ -10,7 +10,7 @@
     flex-direction: row;
     align-items: center;
     gap: 5px;
-    font-size: 13px;
+    font-size: var(--small-font);
 }
 
 .social-container,
